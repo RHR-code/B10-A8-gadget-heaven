@@ -1,0 +1,421 @@
+[
+  {
+    "product_id": "C001",
+    "product_title": "Apple MacBook Pro 16-inch (2022)",
+    "product_image": "https://i.ibb.co.com/vwPycbm/Apple-Mac-Book-Pro.jpg",
+    "category": "Computer",
+    "price": 2499,
+    "description": "High-performance laptop for professionals with M1 Pro chip.",
+    "specification": [
+      "16-inch Retina Display",
+      "Apple M1 Pro chip",
+      "16GB RAM, 512GB SSD",
+      "Touch Bar and Touch ID"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "C002",
+    "product_title": "Dell XPS 13 (2021)",
+    "product_image": "https://i.ibb.co.com/FzkHLFC/Dell-XPS-13-2021.jpg",
+    "category": "Computer",
+    "price": 1099,
+    "description": "Compact and powerful laptop with 4K display.",
+    "specification": [
+      "13.3-inch 4K UHD Display",
+      "Intel Core i7 Processor",
+      "16GB RAM, 1TB SSD",
+      "Fingerprint reader"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "C003",
+    "product_title": "Microsoft Surface Laptop 4",
+    "product_image": "https://i.ibb.co.com/hBLxcfP/Microsoft-Surface-Laptop-4.jpg",
+    "category": "Computer",
+    "price": 1299,
+    "description": "Sleek and lightweight with AMD Ryzen processor.",
+    "specification": [
+      "13.5-inch PixelSense Display",
+      "AMD Ryzen 5",
+      "8GB RAM, 256GB SSD",
+      "Windows 11"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "C004",
+    "product_title": "HP Spectre x360",
+    "product_image": "https://i.ibb.co.com/Fs7YqrG/HP-Spectre-x360.jpg",
+    "category": "Computer",
+    "price": 1399,
+    "description": "Convertible laptop with premium design.",
+    "specification": [
+      "13.3-inch FHD Touchscreen",
+      "Intel Core i7",
+      "16GB RAM, 512GB SSD",
+      "360° hinge"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "C005",
+    "product_title": "Lenovo ThinkPad X1 Carbon",
+    "product_image": "https://i.ibb.co.com/ys6cSJT/Lenovo-Think-Pad-X1-Carbon.jpg",
+    "category": "Computer",
+    "price": 1599,
+    "description": "Business laptop with strong build quality.",
+    "specification": [
+      "14-inch UHD Display",
+      "Intel Core i7",
+      "16GB RAM, 1TB SSD",
+      "Windows 11 Pro"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "C006",
+    "product_title": "Acer Predator Helios 300",
+    "product_image": "https://i.ibb.co.com/McFn3fv/Acer-Predator-Helios-300.png",
+    "category": "Computer",
+    "price": 1199,
+    "description": "Gaming laptop with powerful graphics card.",
+    "specification": [
+      "15.6-inch FHD Display",
+      "Intel Core i7",
+      "16GB RAM, 512GB SSD",
+      "NVIDIA GTX 1660Ti"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "C007",
+    "product_title": "ASUS ZenBook Duo 14",
+    "product_image": "https://i.ibb.co.com/3sGpHWN/ASUS-Zen-Book-Duo-14.jpg",
+    "category": "Computer",
+    "price": 1499,
+    "description": "Dual-screen laptop for multitasking.",
+    "specification": [
+      "14-inch FHD NanoEdge Display",
+      "Intel Core i7",
+      "16GB RAM, 1TB SSD",
+      "Secondary ScreenPad Plus"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P001",
+    "product_title": "Apple iPhone 15 Pro Max",
+    "product_image": "https://i.ibb.co.com/gdLN6V7/Apple-i-Phone-15-Pro-Max.jpg",
+    "category": "Phone",
+    "price": 1299,
+    "description": "Ultimate smartphone with the iPhone 15 Pro Max.",
+    "specification": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "Triple-camera system",
+      "LiDAR Scanner"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Samsung Galaxy S23 Ultra",
+    "product_image": "https://i.ibb.co.com/kHp04NX/Samsung-Galaxy-S23-Ultra.jpg",
+    "category": "Phone",
+    "price": 1199,
+    "description": "Samsung's flagship phone with advanced camera and performance.",
+    "specification": [
+      "6.8-inch Dynamic AMOLED 2X display",
+      "Snapdragon 8 Gen 2",
+      "200MP Quad camera",
+      "5,000mAh battery"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Google Pixel 7 Pro",
+    "product_image": "https://i.ibb.co.com/fMBFqWr/Google-Pixel-7-Pro.jpg",
+    "category": "Phone",
+    "price": 899,
+    "description": "Pure Android experience with AI features.",
+    "specification": [
+      "6.7-inch LTPO OLED display",
+      "Google Tensor G2",
+      "50MP Triple-camera",
+      "Titan M2 Security chip"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P004",
+    "product_title": "OnePlus 11",
+    "product_image": "https://i.ibb.co.com/JtR4NBK/One-Plus-11.jpg",
+    "category": "Phone",
+    "price": 799,
+    "description": "Fast and smooth performance with OxygenOS.",
+    "specification": [
+      "6.55-inch Fluid AMOLED display",
+      "Snapdragon 8 Gen 1",
+      "50MP Triple-camera",
+      "Warp Charge 65T"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P005",
+    "product_title": "Sony Xperia 1 IV",
+    "product_image": "https://i.ibb.co.com/ThR8Xmt/Sony-Xperia-1-IV.jpg",
+    "category": "Phone",
+    "price": 999,
+    "description": "Professional-level photography in a smartphone.",
+    "specification": [
+      "6.5-inch 4K HDR OLED display",
+      "Snapdragon 8 Gen 1",
+      "Quad-camera system with Zeiss optics",
+      "360 Reality Audio"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Xiaomi Mi 12 Pro",
+    "product_image": "https://i.ibb.co.com/JzBCK2R/Xiaomi-Mi-12-Pro.jpg",
+    "category": "Phone",
+    "price": 749,
+    "description": "High-end smartphone with fast charging.",
+    "specification": [
+      "6.73-inch LTPO AMOLED display",
+      "Snapdragon 8 Gen 1",
+      "108MP Triple-camera",
+      "120W Fast Charging"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P007",
+    "product_title": "Oppo Find X5 Pro",
+    "product_image": "https://i.ibb.co.com/yqYmzLk/Oppo-Find-X5-Pro.jpg",
+    "category": "Phone",
+    "price": 899,
+    "description": "Sleek design with Hasselblad camera partnership.",
+    "specification": [
+      "6.7-inch AMOLED display",
+      "Snapdragon 8 Gen 1",
+      "50MP Triple-camera",
+      "80W SuperVOOC Charging"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": "SW001",
+    "product_title": "Apple Watch Series 8",
+    "product_image": "https://i.ibb.co.com/gMcXQkz/Apple-Watch-Series-8.png",
+    "category": "SmartWatch",
+    "price": 399,
+    "description": "Stay connected, active, and healthy with the latest Apple Watch Series 8.",
+    "specification": [
+      "45mm or 41mm case size",
+      "Blood Oxygen & ECG app",
+      "Always-On Retina display"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "SW002",
+    "product_title": "Samsung Galaxy Watch 5",
+    "product_image": "https://i.ibb.co.com/MkXWtGT/Samsung-Galaxy-Watch-5.jpg",
+    "category": "SmartWatch",
+    "price": 279,
+    "description": "Achieve your fitness goals and stay connected with Samsung Galaxy Watch 5.",
+    "specification": [
+      "1.4-inch Super AMOLED display",
+      "Advanced sleep tracking",
+      "Up to 40 hours of battery life"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "SW003",
+    "product_title": "Fitbit Versa 4",
+    "product_image": "https://i.ibb.co.com/b2pkpBG/Fitbit-Versa-4.jpg",
+    "category": "SmartWatch",
+    "price": 229,
+    "description": "Optimize your workouts and health with Fitbit Versa 4.",
+    "specification": [
+      "Built-in GPS",
+      "Heart rate monitor",
+      "6+ day battery life"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": "SW004",
+    "product_title": "Garmin Venu 2 Plus",
+    "product_image": "https://i.ibb.co.com/SrQXwFx/Garmin-Venu-2-Plus.jpg",
+    "category": "SmartWatch",
+    "price": 449,
+    "description": "Advanced GPS smartwatch with health monitoring features from Garmin.",
+    "specification": [
+      "1.3-inch AMOLED display",
+      "Voice assistant support",
+      "Health snapshot feature"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "SW005",
+    "product_title": "Amazfit GTS 3",
+    "product_image": "https://i.ibb.co.com/dWxR2pz/Amazfit-GTS-3.jpg",
+    "category": "SmartWatch",
+    "price": 179,
+    "description": "A stylish and powerful smartwatch with health and fitness features.",
+    "specification": [
+      "1.75-inch AMOLED display",
+      "24-day battery life",
+      "Blood oxygen measurement"
+    ],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": "SW006",
+    "product_title": "Huawei Watch GT 3",
+    "product_image": "https://i.ibb.co.com/fFmVDFj/Huawei-Watch-GT-3.png",
+    "category": "SmartWatch",
+    "price": 249,
+    "description": "Track your fitness and stay connected with Huawei Watch GT 3.",
+    "specification": [
+      "1.43-inch AMOLED display",
+      "14-day battery life",
+      "100+ workout modes"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": "SW007",
+    "product_title": "TicWatch Pro 3",
+    "product_image": "https://i.ibb.co.com/hL52ZWW/Tic-Watch-Pro-3.jpg",
+    "category": "SmartWatch",
+    "price": 299,
+    "description": "High-performance smartwatch with extended battery life.",
+    "specification": [
+      "Dual-layer display",
+      "Up to 45 days battery life in Essential Mode",
+      "GPS and heart rate tracking"
+    ],
+    "availability": true,
+    "rating": 4.2
+  },
+  {
+    "product_id": "CH001",
+    "product_title": "Anker PowerPort III Nano",
+    "product_image": "https://i.ibb.co.com/cCSw2bp/Anker-Power-Port-III-Nano.jpg",
+    "category": "Charger",
+    "price": 19,
+    "description": "Ultra-compact charger with fast charging capabilities.",
+    "specification": [
+      "18W PowerIQ 3.0",
+      "USB-C port",
+      "Compatible with iPhones and Android devices"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "CH002",
+    "product_title": "Apple 20W USB-C Power Adapter",
+    "product_image": "https://i.ibb.co.com/8msdXwT/Apple-20-W-USB-C-Power-Adapter.jpg",
+    "category": "Charger",
+    "price": 29,
+    "description": "Fast-charging adapter for iPhone and iPad models.",
+    "specification": [
+      "20W power delivery",
+      "USB-C output",
+      "Works with iPhone 8 and later"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "CH003",
+    "product_title": "Samsung 25W Super Fast Charger",
+    "product_image": "https://i.ibb.co.com/SnQn517/Samsung-25-W-Super-Fast-Charger.jpg",
+    "category": "Charger",
+    "price": 25,
+    "description": "Fast charging for compatible Samsung devices.",
+    "specification": [
+      "25W USB-C charging",
+      "Compatible with Galaxy devices",
+      "Lightweight and portable"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "PB001",
+    "product_title": "Anker PowerCore 10000",
+    "product_image": "https://i.ibb.co.com/cQ3xGQH/Anker-Power-Core-10000.jpg",
+    "category": "PowerBank",
+    "price": 39,
+    "description": "Compact and portable power bank with high-speed charging.",
+    "specification": [
+      "10000mAh capacity",
+      "Ultra-compact design",
+      "High-speed charging technology"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "PB002",
+    "product_title": "RAVPower 20000mAh Power Bank",
+    "product_image": "https://i.ibb.co.com/pr9Gn85/RAVPower-20000m-Ah-Power-Bank.jpg",
+    "category": "PowerBank",
+    "price": 49,
+    "description": "High-capacity power bank with multiple output options.",
+    "specification": [
+      "20000mAh capacity",
+      "Dual USB output",
+      "Quick Charge 3.0 support"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "PB003",
+    "product_title": "Xiaomi Mi Power Bank 3",
+    "product_image": "https://i.ibb.co.com/Hz7hrpw/Xiaomi-Mi-Power-Bank-3.jpg",
+    "category": "PowerBank",
+    "price": 35,
+    "description": "Reliable power bank with large capacity for multiple charges.",
+    "specification": [
+      "20000mAh capacity",
+      "Dual USB output",
+      "18W fast charging support"
+    ],
+    "availability": true,
+    "rating": 4.6
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "category": "AllProduct",
+    "slug": "All-Products"
+  },
+  {
+    "id": 1,
+    "category": "Computer",
+    "slug": "computers"
+  },
+  {
+    "id": 2,
+    "category": "Phone",
+    "slug": "phones"
+  },
+  {
+    "id": 3,
+    "category": "SmartWatch",
+    "slug": "smart-watches"
+  },
+  {
+    "id": 4,
+    "category": "Charger",
+    "slug": "chargers"
+  },
+  {
+    "id": 5,
+    "category": "PowerBank",
+    "slug": "power-banks"
+  },
+  {
+    "id": 6,
+    "category": "Headphone",
+    "slug": "headphones"
+  }
+]

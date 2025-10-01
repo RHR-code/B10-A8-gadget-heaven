@@ -5,12 +5,11 @@ import { NavLink, useLocation } from "react-router";
 const Navbar = () => {
   const navigation = useLocation();
   const location = navigation.pathname;
-  console.log(navigation.pathname);
   return (
     <div className="max-w-[1600px] mx-auto px-5 ">
       <div
         className={`navbar  ${
-          location === "/"
+          location === "/category/AllProduct"
             ? "bg-[#9538E2] text-white mt-5 md:mt-8 rounded-t-4xl pr-5 md:px-15 pt-5 md:pt-9 "
             : "bg-base-100 text-black"
         }`}

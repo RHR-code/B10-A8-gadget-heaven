@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Navigate,
   Route,
   RouterProvider,
 } from "react-router";
@@ -17,6 +18,8 @@ const router = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="/statistics" element={<Statistics />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/" element={<Navigate to="/category/AllProduct" />} />
+      <Route path="/category/:productId" element={<Home />} />
     </Route>
   )
 );
