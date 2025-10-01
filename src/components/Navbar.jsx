@@ -11,7 +11,7 @@ const Navbar = () => {
       <div
         className={`navbar  ${
           location === "/"
-            ? "bg-[#9538E2] text-white mt-8 rounded-t-4xl px-15 pt-9 "
+            ? "bg-[#9538E2] text-white mt-5 md:mt-8 rounded-t-4xl pr-5 md:px-15 pt-5 md:pt-9 "
             : "bg-base-100 text-black"
         }`}
       >
@@ -36,16 +36,37 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Home</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "font-bold text-[#9538E2] " : "font-semibold ]"
+                  }
+                  to="/"
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <a>Statistics</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "font-bold  text-[#9538E2]" : "font-semibold ]"
+                  }
+                  to="/statistics"
+                >
+                  Statistics
+                </NavLink>
               </li>
               <li>
-                <a>Dashboard</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "font-bold  text-[#9538E2]" : "font-semibold ]"
+                  }
+                  to="/dashboard"
+                >
+                  Dashboard
+                </NavLink>
               </li>
             </ul>
           </div>
