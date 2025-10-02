@@ -12,6 +12,7 @@ import {
 import Home from "./components/Home.jsx";
 import Statistics from "./components/Statistics.jsx";
 import Dashboard from "./components/Dashboard.jsx";
+import ProductsDetails from "./components/ProductsDetails.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
@@ -23,6 +24,11 @@ const router = createBrowserRouter(
         path="/category/:productId"
         loader={() => fetch("/product.json")}
         element={<Home />}
+      />
+      <Route
+        path="/ProductsDetails/:productId"
+        loader={() => fetch("/product.json")}
+        element={<ProductsDetails />}
       />
     </Route>
   )

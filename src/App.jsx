@@ -9,11 +9,13 @@ function App() {
   const [productsData, setProductsData] = useState([]);
   return (
     <>
-      <productContext.Provider value={{ productsData, setProductsData }}>
-        <Navbar />
-        <Outlet />
-        <Footer />
-      </productContext.Provider>
+      <div className="bg-[#F6F6F6]">
+        <productContext.Provider value={{ productsData, setProductsData }}>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </productContext.Provider>
+      </div>
     </>
   );
 }

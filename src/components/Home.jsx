@@ -4,11 +4,9 @@ import Banner from "./Banner";
 import Gadgets from "./Gadgets";
 
 const Home = () => {
-  const navigation = useLocation();
-
   return (
     <>
-      <div className="bg-[#F6F6F6]">
+      <div>
         <Banner />
         <Gadgets />
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const GadgetCard = ({ card }) => {
   return (
@@ -10,9 +11,11 @@ const GadgetCard = ({ card }) => {
       />
       <h2 className="mt-6 font-semibold text-2xl">{card.product_title}</h2>
       <p className="mt-3 mb-4">Price:{card.price}$ </p>
-      <button className="py-3.5 border border-[#9538E2] rounded-full  text-[#9538E2] font-extrabold text-lg mb-6 px-6">
-        All Product
-      </button>
+      <NavLink to={`/productsDetails/${card.product_id}`}>
+        <button className="py-3.5 border border-[#9538E2] rounded-full  text-[#9538E2] font-extrabold text-lg mb-6 px-6">
+          All Product
+        </button>
+      </NavLink>
     </div>
   );
 };
