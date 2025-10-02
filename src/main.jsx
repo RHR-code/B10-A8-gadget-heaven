@@ -18,8 +18,12 @@ const router = createBrowserRouter(
       <Route path="/" element={<Home />} />
       <Route path="/statistics" element={<Statistics />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/" element={<Navigate to="/category/AllProduct" />} />
-      <Route path="/category/:productId" element={<Home />} />
+      <Route index={true} element={<Navigate to="/category/AllProduct" />} />
+      <Route
+        path="/category/:productId"
+        loader={() => fetch("/product.json")}
+        element={<Home />}
+      />
     </Route>
   )
 );
