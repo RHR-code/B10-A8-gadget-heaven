@@ -1,20 +1,20 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import productContext from "../Contexts/cartContext";
 
 const CategoryBtn = ({ item }) => {
-  const { productsData, setProductsData } = useContext(productContext);
+  // const { productsData, setProductsData } = useContext(productContext);
 
-  const handleClick = () => {
-    const newProductData = productsData.filter(
-      (product) => product.category === item.category
-    );
-    setProductsData([...newProductData]);
-  };
+  // const handleClick = () => {
+  //   const newProductData = productsData.filter(
+  //     (product) => product.category === item.category
+  //   );
+  //   setProductsData([...newProductData]);
+  // };
   return (
     <NavLink
       to={`/category/${item.category}`}
-      onClick={handleClick}
+      // onClick={handleClick}
       key={item.id}
       className={({ isActive }) =>
         `py-3.5 rounded-full w-full  font-extrabold text-lg mb-6 ${

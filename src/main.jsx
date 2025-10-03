@@ -20,13 +20,20 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/" element={<Home />} />
-      <Route path="/statistics" element={<Statistics />} />
+      <Route
+        path="/statistics"
+        loader={() => fetch("/product.json")}
+        element={<Statistics />}
+      />
       <Route path="/dashboard" element={<Dashboard />}>
         <Route index={true} element={<Navigate to="Cart" replace />} />
         <Route path="/dashboard/Cart" element={<Cart />} />
         <Route path="/dashboard/WishList" element={<WishList />} />
       </Route>
-      <Route index={true} element={<Navigate to="/category/AllProduct" />} />
+      <Route
+        index={true}
+        element={<Navigate to="/category/AllProduct" replace />}
+      />
       <Route
         path="/category/:productId"
         loader={async () => {
