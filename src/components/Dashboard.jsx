@@ -1,5 +1,6 @@
 import React from "react";
 import Cart from "./Cart";
+import { NavLink, Outlet } from "react-router";
 
 const Dashboard = () => {
   return (
@@ -11,15 +12,30 @@ const Dashboard = () => {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
         <div className="pb-10">
-          <button className="py-3 px-16 text-[#9538E2] bg-white border-b-white rounded-full text-lg font-semibold mr-5">
-            Cart
-          </button>
-          <button className="py-3 px-16 text-white bg-transparent border border-b-white text-lg font-semibold rounded-full">
-            Wishlist
-          </button>
+          <NavLink
+            to="/dashboard/Cart"
+            className={({ isActive }) =>
+              isActive
+                ? "py-3 px-16 border border-b-white rounded-full text-lg font-semibold mr-5 text-[#9538E2] bg-white"
+                : "text-white bg-transparent py-3 px-16  border border-b-white text-lg font-semibold rounded-full"
+            }
+          >
+            <button className="">Cart</button>
+          </NavLink>
+          <NavLink
+            to="/dashboard/WishList"
+            className={({ isActive }) =>
+              isActive
+                ? "py-3 px-16 border border-b-white rounded-full text-lg font-semibold ml-5 text-[#9538E2] bg-white"
+                : "text-white bg-transparent py-3 px-16  border border-b-white text-lg font-semibold rounded-full"
+            }
+          >
+            <button className="">Wishlist</button>
+          </NavLink>
         </div>
       </div>
-      <Cart />
+      {/* <Cart /> */}
+      <Outlet />
     </div>
   );
 };

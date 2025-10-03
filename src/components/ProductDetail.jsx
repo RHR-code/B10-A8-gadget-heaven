@@ -1,13 +1,56 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import star from "../assets/star-full.png";
 import starEmt from "../assets/star-empty.png";
 import { Heart, ShoppingCart } from "lucide-react";
 import { useLoaderData, useParams } from "react-router";
+import cartContext from "../Contexts/cartContext";
+import { toast } from "react-toastify";
+import wishListContext from "../Contexts/wishListContext";
 const ProductDetail = () => {
+  const { cartItems, setCartItems } = useContext(cartContext);
+  const { wLItems, setWLItems } = useContext(wishListContext);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { productId } = useParams();
   const data = useLoaderData();
   const [productData] = data.filter((item) => item.product_id === productId);
-  console.log(productData);
+  // click function for cart
+  const handleCartBtn = () => {
+    const inCart = cartItems.find(
+      (item) => item.product_id === productData.product_id
+    );
+
+    if (!inCart) {
+      setCartItems([...cartItems, productData]);
+      toast.success("Product added to the cart", {
+        autoClose: 1000,
+      });
+    } else {
+      toast.error("Product already in the cart", {
+        autoClose: 1000,
+      });
+    }
+  };
+  // click function for wishlist
+  const handleWLClick = () => {
+    const inWishList = wLItems.find(
+      (item) => item.product_id === productData.product_id
+    );
+
+    if (!inWishList) {
+      setWLItems([...wLItems, productData]);
+      toast.success("Product added to the WishList", {
+        autoClose: 1000,
+      });
+    } else {
+      toast.error("Product already in the WishList", {
+        autoClose: 1000,
+      });
+    }
+  };
+
   const {
     availability,
     category,
@@ -69,10 +112,16 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="flex items-center gap-5">
-            <button className="bg-[#9538E2] flex items-center gap-4 text-white px-5 p-3 rounded-full">
+            <button
+              onClick={handleCartBtn}
+              className="bg-[#9538E2] cursor-pointer hover:bg-[#9538E2]/80 flex items-center gap-4 text-white px-5 p-3 rounded-full"
+            >
               Add To Cart <ShoppingCart />{" "}
             </button>
-            <div className="border border-gray-300 p-2 rounded-full">
+            <div
+              onClick={handleWLClick}
+              className="border border-gray-300 p-2 rounded-full"
+            >
               <Heart />
             </div>
           </div>

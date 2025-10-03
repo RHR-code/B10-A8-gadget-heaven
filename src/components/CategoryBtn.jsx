@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router";
-import productContext from "../Contexts/productContext";
+import productContext from "../Contexts/cartContext";
 
 const CategoryBtn = ({ item }) => {
   const { productsData, setProductsData } = useContext(productContext);
