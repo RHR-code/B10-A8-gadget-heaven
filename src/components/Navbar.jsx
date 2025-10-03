@@ -118,13 +118,27 @@ const Navbar = () => {
             </button>
           </div>
         ) : (
-          <div className="navbar-end">
-            <button className="border border-gray-300 p-2.5 rounded-full mr-4">
+          <div className="navbar-end flex gap-3">
+            <NavLink
+              to="/dashboard/Cart"
+              className={({ isActive }) =>
+                isActive
+                  ? "border border-gray-300 bg-[#9538E2] text-white p-2.5 rounded-full "
+                  : "border border-gray-300 p-2.5 rounded-full"
+              }
+            >
               <ShoppingCart />
-            </button>
-            <button className="border border-gray-300 p-2.5 rounded-full">
+            </NavLink>
+            <NavLink
+              to="/dashboard/WishList"
+              className={({ isActive }) =>
+                isActive
+                  ? "border border-gray-300 bg-[#9538E2] text-white p-2.5 rounded-full"
+                  : "border border-gray-300 p-2.5 rounded-full"
+              }
+            >
               <Heart />
-            </button>
+            </NavLink>
           </div>
         )}
       </div>
