@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import cartContext from "../Contexts/cartContext";
 import { CircleX, Filter } from "lucide-react";
 import { toast } from "react-toastify";
+import { deleteFromLocalStorage } from "../utilities/LocalStorage";
 const SingleCartItem = ({ item, totalPrice }) => {
   const { description, price, product_id, product_image, product_title } = item;
   const { cartItems, setCartItems, seTotalPrice } = useContext(cartContext);
   const handleDeleteCart = () => {
+    deleteFromLocalStorage(product_id);
     const newCartItems = cartItems.filter(
       (item) => item.product_id !== product_id
     );
@@ -19,10 +21,10 @@ const SingleCartItem = ({ item, totalPrice }) => {
   return (
     <div
       id={product_id}
-      className="rounded-4xl p-8 flex gap-8 h-[188px] bg-white shadow-2xl mb-8 relative"
+      className="rounded-4xl p-8 flex gap-8 flex-col md:flex-row items-center  bg-white shadow-2xl mb-8 relative"
     >
       <div className="flex-1/3">
-        <img className="rounded-2xl h-full" src={product_image} alt="" />
+        <img className="rounded-2xl " src={product_image} alt="" />
       </div>
       <div className="flex-2/3 text-[#09080F]">
         <h2 className="font-semibold text-2xl">{product_title}</h2>

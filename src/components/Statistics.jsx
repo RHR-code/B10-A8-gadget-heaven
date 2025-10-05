@@ -16,7 +16,7 @@ const Statistics = () => {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
       </div>
-      <div className="max-w-[1280px] mx-auto bg-white p-5">
+      <div className="max-w-[1280px] mx-auto bg-white p-5 ">
         <div>
           <h1 className="text-xl font-bold  ">Statistics</h1>
         </div>

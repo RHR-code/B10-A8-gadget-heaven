@@ -6,6 +6,11 @@ import { useLoaderData, useParams } from "react-router";
 import cartContext from "../Contexts/cartContext";
 import { toast } from "react-toastify";
 import wishListContext from "../Contexts/wishListContext";
+import {
+  addToLocalStorage,
+  getFromLocalStorage,
+} from "../utilities/LocalStorage";
+import { addToLocalStorage as wsLocalStorage } from "../utilities/LocalStorage2";
 const ProductDetail = () => {
   const { cartItems, setCartItems } = useContext(cartContext);
   const { wLItems, setWLItems } = useContext(wishListContext);
@@ -16,8 +21,25 @@ const ProductDetail = () => {
   const { productId } = useParams();
   const data = useLoaderData();
   const [productData] = data.filter((item) => item.product_id === productId);
+  console.log(data);
+
+  const {
+    availability,
+    category,
+    description,
+    price,
+    product_id,
+    product_image,
+    product_title,
+    rating,
+    specification,
+  } = productData;
+
   // click function for cart
   const handleCartBtn = () => {
+    // adding to localstorage
+    addToLocalStorage(product_id);
+
     const inCart = cartItems.find(
       (item) => item.product_id === productData.product_id
     );
@@ -35,6 +57,7 @@ const ProductDetail = () => {
   };
   // click function for wishlist
   const handleWLClick = () => {
+    wsLocalStorage(product_id);
     const inWishList = wLItems.find(
       (item) => item.product_id === productData.product_id
     );
@@ -51,25 +74,16 @@ const ProductDetail = () => {
     }
   };
 
-  const {
-    availability,
-    category,
-    description,
-    price,
-    product_id,
-    product_image,
-    product_title,
-    rating,
-    specification,
-  } = productData;
-
   return (
-    <div key={product_id} className="max-w-[1600px] mx-auto -mt-60 ">
-      <div className="flex gap-8 bg-white mx-40 p-8 rounded-4xl shadow-2xl">
+    <div
+      key={product_id}
+      className="max-w-[1600px] mx-auto md:-mt-60 -mt-100 mb-10"
+    >
+      <div className="flex flex-col md:flex-row  gap-8 bg-white mx-5 md:mx-40 p-8 rounded-4xl shadow-2xl">
         <div className="flex-1/3 flex items-center">
           <img className="rounded-2xl" src={product_image} alt="" />
         </div>
-        <div className="flex flex-col items-start gap-4 flex-2/3">
+        <div className="flex  flex-col items-start gap-4 flex-2/3">
           <h2 className="font-semibold text-3xl text-[#09080F]">
             {product_title}
           </h2>

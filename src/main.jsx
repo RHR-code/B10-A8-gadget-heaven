@@ -16,9 +16,10 @@ import ProductsDetails from "./components/ProductsDetails.jsx";
 import Cart from "./components/Cart.jsx";
 import WishList from "./components/WishList.jsx";
 import { Car } from "lucide-react";
+import PageNotFound from "./components/PageNotFound.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+    <Route path="/" element={<App />} errorElement={<PageNotFound />}>
       <Route path="/" element={<Home />} />
       <Route
         path="/statistics"
@@ -27,8 +28,16 @@ const router = createBrowserRouter(
       />
       <Route path="/dashboard" element={<Dashboard />}>
         <Route index={true} element={<Navigate to="Cart" replace />} />
-        <Route path="/dashboard/Cart" element={<Cart />} />
-        <Route path="/dashboard/WishList" element={<WishList />} />
+        <Route
+          path="/dashboard/Cart"
+          loader={() => fetch("/product.json")}
+          element={<Cart />}
+        />
+        <Route
+          path="/dashboard/WishList"
+          loader={() => fetch("/product.json")}
+          element={<WishList />}
+        />
       </Route>
       <Route
         index={true}

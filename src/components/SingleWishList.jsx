@@ -3,11 +3,14 @@ import { CircleX, Filter } from "lucide-react";
 import { toast } from "react-toastify";
 import wishListContext from "../Contexts/wishListContext";
 import cartContext from "../Contexts/cartContext";
+import { addToLocalStorage } from "../utilities/LocalStorage";
+import { deleteFromLocalStorage } from "../utilities/LocalStorage2";
 const SingleWishList = ({ item }) => {
   const { description, price, product_id, product_image, product_title } = item;
   const { wLItems, setWLItems } = useContext(wishListContext);
 
   const handleDeleteWishList = () => {
+    deleteFromLocalStorage(product_id);
     const newWLItems = wLItems.filter((item) => item.product_id !== product_id);
     setWLItems(newWLItems);
     toast.error("Product Deleted From WishList", {
@@ -15,11 +18,13 @@ const SingleWishList = ({ item }) => {
     });
   };
 
-  //   add to the cartbtn
-
   const { cartItems, setCartItems } = useContext(cartContext);
 
   const handleCartBtn = () => {
+    //   add to the cartbtn
+
+    addToLocalStorage(product_id);
+
     const inCart = cartItems.find(
       (cartItem) => cartItem.product_id === item.product_id
     );
@@ -39,7 +44,7 @@ const SingleWishList = ({ item }) => {
   return (
     <div
       id={product_id}
-      className="rounded-4xl p-8 flex gap-8 h-[256px] bg-white shadow-2xl mb-8 relative"
+      className="rounded-4xl p-8 flex flex-col md:flex-row gap-8  bg-white shadow-2xl mb-8 relative"
     >
       <div className="flex-1/3">
         <img className="rounded-2xl h-full" src={product_image} alt="" />
