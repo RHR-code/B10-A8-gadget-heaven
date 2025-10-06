@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import star from "../assets/star-full.png";
 import starEmt from "../assets/star-empty.png";
 import { Heart, ShoppingCart } from "lucide-react";
@@ -14,6 +14,7 @@ import { addToLocalStorage as wsLocalStorage } from "../utilities/LocalStorage2"
 const ProductDetail = () => {
   const { cartItems, setCartItems } = useContext(cartContext);
   const { wLItems, setWLItems } = useContext(wishListContext);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -67,6 +68,8 @@ const ProductDetail = () => {
       toast.success("Product added to the WishList", {
         autoClose: 1000,
       });
+      // setIsWishClicked(true);
+      JSON.stringify(localStorage.setItem("wsbtn", true));
     } else {
       toast.error("Product already in the WishList", {
         autoClose: 1000,
@@ -132,9 +135,10 @@ const ProductDetail = () => {
             >
               Add To Cart <ShoppingCart />{" "}
             </button>
+
             <div
               onClick={handleWLClick}
-              className="border border-gray-300 p-2 rounded-full"
+              className="border border-gray-300 p-2 rounded-full  hover:border-[#9538E2]/30 hover:text-[#9538E2] "
             >
               <Heart />
             </div>

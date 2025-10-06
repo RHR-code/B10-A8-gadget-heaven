@@ -2,11 +2,9 @@ const getFromLocalStorage = () => {
   return JSON.parse(localStorage.getItem("CartId")) || [];
 };
 const addToLocalStorage = (id) => {
-  console.log(id);
-
   const items = getFromLocalStorage();
   if (items.includes(id)) {
-    alert("this item is already in the cart");
+    ("");
   } else {
     items.push(id);
     localStorage.setItem("CartId", JSON.stringify(items));

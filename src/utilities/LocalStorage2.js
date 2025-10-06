@@ -6,7 +6,7 @@ const addToLocalStorage = (id) => {
 
   const items = getFromLocalStorage();
   if (items.includes(id)) {
-    alert("this item is already in the cart");
+    ("");
   } else {
     items.push(id);
     localStorage.setItem("WsId", JSON.stringify(items));

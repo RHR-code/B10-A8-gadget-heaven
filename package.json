@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "npm run build && cp dist/index.html dist/200.html && surge dist havenofgadgets.surge.sh",
     "lint": "eslint .",
     "preview": "vite preview"
   },

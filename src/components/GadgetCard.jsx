@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 const GadgetCard = ({ card }) => {
   return (
-    <div className="p-5 rounded-2xl bg-white shadow-2xl flex flex-col justify-between">
+    <div className="p-5 rounded-2xl bg-white shadow-2xl flex flex-col justify-between hover:scale-105 transition ease-in-out">
       <img
         className="w-full rounded-xl h-[200px] object-contain"
         src={card.product_image}
@@ -12,7 +12,7 @@ const GadgetCard = ({ card }) => {
       <h2 className="mt-6 font-semibold text-2xl">{card.product_title}</h2>
       <p className="mt-3 mb-4">Price:{card.price}$ </p>
       <NavLink to={`/productsDetails/${card.product_id}`}>
-        <button className="py-3.5 border border-[#9538E2] rounded-full  text-[#9538E2] font-extrabold text-lg mb-6 px-6">
+        <button className="py-3.5 border border-[#9538E2] rounded-full  text-[#9538E2] hover:bg-[#9538E2] transition hover:text-white font-extrabold text-lg mb-6 px-6">
           All Product
         </button>
       </NavLink>
